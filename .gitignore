@@ -1,0 +1,9 @@
+node_modules/
+output/
+.superpowers/
+tank/
+
+# Local development artifacts
+*.log
+*.tmp
+*.bak

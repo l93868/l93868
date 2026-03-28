@@ -1,0 +1,71 @@
+<view class="page-shell">
+  <canvas id="gameCanvas" type="2d" class="game-canvas" />
+
+  <view class="top-bar">
+    <view class="panel left">
+      <text class="eyebrow">{{chapterText}}</text>
+      <text class="title">{{missionTitle}}</text>
+      <text class="subtitle">{{missionHint}}</text>
+    </view>
+    <view class="panel right">
+      <text class="eyebrow">Battle</text>
+      <text class="inline ally">Allies {{allyCount}}</text>
+      <text class="inline enemy">Enemies {{enemyCount}}</text>
+      <text class="subtitle">{{playerHpText}}</text>
+    </view>
+  </view>
+
+  <view class="right-actions">
+    <button class="floating" bindtap="handleToggleMap">{{mapButtonText}}</button>
+    <button class="floating alt" bindtap="handleCycleRole">Tank</button>
+  </view>
+
+  <view class="bottom-ui">
+    <view class="dpad">
+      <button class="pad-btn up" data-key="up" catchtouchstart="handleDirStart" catchtouchend="handleDirEnd" catchtouchcancel="handleDirEnd">U</button>
+      <button class="pad-btn left" data-key="left" catchtouchstart="handleDirStart" catchtouchend="handleDirEnd" catchtouchcancel="handleDirEnd">L</button>
+      <button class="pad-btn right" data-key="right" catchtouchstart="handleDirStart" catchtouchend="handleDirEnd" catchtouchcancel="handleDirEnd">R</button>
+      <button class="pad-btn down" data-key="down" catchtouchstart="handleDirStart" catchtouchend="handleDirEnd" catchtouchcancel="handleDirEnd">D</button>
+    </view>
+
+    <view class="skills">
+      <button class="skill" bindtap="handleSkill">
+        <text class="skill-name">{{skillName}}</text>
+        <text class="skill-tip">Skill</text>
+      </button>
+      <button class="skill ulti" bindtap="handleSuper">
+        <text class="skill-name">{{superName}}</text>
+        <text class="skill-tip">Super</text>
+      </button>
+    </view>
+  </view>
+
+  <view class="overlay" wx:if="{{ready && status !== 'running'}}">
+    <view class="dialog">
+      <text class="eyebrow">Tank game for kids</text>
+      <text class="dialog-title">{{dialogTitle}}</text>
+      <text class="dialog-copy">{{dialogCopy}}</text>
+
+      <view class="role-card">
+        <text class="role-tag">Current tank</text>
+        <text class="role-name">{{roleName}}</text>
+        <text class="role-copy">{{roleSummary}}</text>
+        <text class="role-copy">{{roleTip}}</text>
+      </view>
+
+      <view class="chips">
+        <view class="chip">Big map</view>
+        <view class="chip">Auto aim</view>
+        <view class="chip">3 tank team</view>
+        <view class="chip">Light Medium Heavy</view>
+        <view class="chip">More stages</view>
+        <view class="chip">Easy start</view>
+      </view>
+
+      <view class="cta-row">
+        <button class="cta ghost" bindtap="handleCycleRole">Switch</button>
+        <button class="cta primary" bindtap="handlePrimaryAction">{{primaryButtonText}}</button>
+      </view>
+    </view>
+  </view>
+</view>

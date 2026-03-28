@@ -1,0 +1,16 @@
+{
+  "appid": "touristappid",
+  "projectname": "tank-squad-battle",
+  "compileType": "miniprogram",
+  "libVersion": "3.4.4",
+  "srcMiniprogramRoot": ".",
+  "setting": {
+    "urlCheck": false,
+    "es6": true,
+    "enhance": true,
+    "postcss": true,
+    "minified": false,
+    "coverView": true,
+    "ignoreUploadUnusedFiles": true
+  }
+}

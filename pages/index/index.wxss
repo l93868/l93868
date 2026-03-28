@@ -1,0 +1,290 @@
+.page-shell {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: linear-gradient(180deg, #07131f, #040a11);
+}
+
+.game-canvas {
+  width: 100vw;
+  height: 100vh;
+}
+
+.top-bar {
+  position: absolute;
+  top: 26rpx;
+  left: 24rpx;
+  right: 24rpx;
+  display: flex;
+  justify-content: space-between;
+  gap: 16rpx;
+  pointer-events: none;
+}
+
+.panel {
+  padding: 18rpx 20rpx;
+  border-radius: 24rpx;
+  background: rgba(3, 10, 18, 0.76);
+  border: 1rpx solid rgba(165, 213, 255, 0.18);
+  box-shadow: 0 16rpx 28rpx rgba(0, 0, 0, 0.24);
+}
+
+.panel.left {
+  width: 52%;
+}
+
+.panel.right {
+  width: 40%;
+}
+
+.eyebrow {
+  display: block;
+  color: #94b0ca;
+  font-size: 20rpx;
+  letter-spacing: 2rpx;
+}
+
+.title {
+  display: block;
+  margin-top: 8rpx;
+  color: #f2f8ff;
+  font-size: 34rpx;
+  font-weight: 700;
+}
+
+.subtitle {
+  display: block;
+  margin-top: 8rpx;
+  color: #a9c0d8;
+  font-size: 22rpx;
+  line-height: 1.5;
+}
+
+.inline {
+  display: inline-block;
+  margin-top: 10rpx;
+  margin-right: 14rpx;
+  font-size: 24rpx;
+}
+
+.ally {
+  color: #8ae9ff;
+}
+
+.enemy {
+  color: #ff9d9d;
+}
+
+.right-actions {
+  position: absolute;
+  top: 220rpx;
+  right: 24rpx;
+  display: flex;
+  flex-direction: column;
+  gap: 16rpx;
+}
+
+.floating {
+  width: 180rpx;
+  height: 72rpx;
+  line-height: 72rpx;
+  border-radius: 999rpx;
+  background: rgba(8, 17, 28, 0.84);
+  color: #eff7ff;
+  font-size: 24rpx;
+  border: 1rpx solid rgba(170, 215, 255, 0.2);
+}
+
+.floating.alt {
+  background: rgba(24, 48, 35, 0.9);
+}
+
+.bottom-ui {
+  position: absolute;
+  left: 24rpx;
+  right: 24rpx;
+  bottom: 30rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.dpad {
+  position: relative;
+  width: 250rpx;
+  height: 250rpx;
+}
+
+.pad-btn {
+  position: absolute;
+  width: 88rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  border-radius: 24rpx;
+  background: rgba(8, 17, 28, 0.84);
+  color: #f2f8ff;
+  font-size: 28rpx;
+  border: 1rpx solid rgba(169, 213, 255, 0.18);
+}
+
+.pad-btn.up {
+  top: 0;
+  left: 81rpx;
+}
+
+.pad-btn.left {
+  top: 81rpx;
+  left: 0;
+}
+
+.pad-btn.right {
+  top: 81rpx;
+  right: 0;
+}
+
+.pad-btn.down {
+  bottom: 0;
+  left: 81rpx;
+}
+
+.skills {
+  display: flex;
+  gap: 16rpx;
+}
+
+.skill {
+  width: 198rpx;
+  height: 126rpx;
+  padding: 14rpx 18rpx;
+  border-radius: 28rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  background: linear-gradient(155deg, rgba(18, 68, 92, 0.92), rgba(7, 18, 37, 0.95));
+  color: #eff7ff;
+  border: 1rpx solid rgba(177, 224, 255, 0.22);
+}
+
+.skill.ulti {
+  background: linear-gradient(155deg, rgba(114, 66, 17, 0.96), rgba(53, 18, 8, 0.98));
+}
+
+.skill-name {
+  font-size: 26rpx;
+  line-height: 1.35;
+  font-weight: 700;
+}
+
+.skill-tip {
+  color: rgba(241, 248, 255, 0.72);
+  font-size: 22rpx;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 34rpx;
+  background: rgba(2, 6, 10, 0.58);
+  backdrop-filter: blur(16rpx);
+}
+
+.dialog {
+  width: 100%;
+  max-width: 690rpx;
+  padding: 34rpx;
+  border-radius: 32rpx;
+  background: linear-gradient(180deg, rgba(9, 18, 32, 0.96), rgba(5, 10, 18, 0.98));
+  border: 1rpx solid rgba(171, 217, 255, 0.18);
+}
+
+.dialog-title {
+  display: block;
+  margin-top: 12rpx;
+  color: #f4fbff;
+  font-size: 44rpx;
+  line-height: 1.2;
+  font-weight: 800;
+}
+
+.dialog-copy {
+  display: block;
+  margin-top: 14rpx;
+  color: #b3c8dc;
+  font-size: 26rpx;
+  line-height: 1.55;
+}
+
+.role-card {
+  margin-top: 24rpx;
+  padding: 22rpx;
+  border-radius: 24rpx;
+  background: rgba(3, 8, 15, 0.72);
+  border: 1rpx solid rgba(170, 217, 255, 0.12);
+}
+
+.role-tag {
+  color: #89aac8;
+  font-size: 20rpx;
+}
+
+.role-name {
+  display: block;
+  margin-top: 8rpx;
+  color: #f4fbff;
+  font-size: 34rpx;
+  font-weight: 700;
+}
+
+.role-copy {
+  display: block;
+  margin-top: 8rpx;
+  color: #acc4da;
+  font-size: 24rpx;
+  line-height: 1.5;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12rpx;
+  margin-top: 22rpx;
+}
+
+.chip {
+  padding: 12rpx 16rpx;
+  border-radius: 999rpx;
+  background: rgba(18, 31, 48, 0.84);
+  color: #dfeeff;
+  font-size: 22rpx;
+}
+
+.cta-row {
+  margin-top: 28rpx;
+  display: flex;
+  gap: 16rpx;
+}
+
+.cta {
+  flex: 1;
+  height: 84rpx;
+  line-height: 84rpx;
+  border-radius: 999rpx;
+  font-size: 28rpx;
+  font-weight: 700;
+}
+
+.cta.ghost {
+  background: rgba(10, 19, 30, 0.9);
+  color: #eef7ff;
+  border: 1rpx solid rgba(171, 219, 255, 0.18);
+}
+
+.cta.primary {
+  background: linear-gradient(135deg, #92e7ff, #73ffb2);
+  color: #031218;
+}

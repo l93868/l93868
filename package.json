@@ -1,0 +1,17 @@
+{
+  "name": "codex",
+  "version": "1.0.0",
+  "description": "This workspace contains a WeChat Mini Program prototype for a kid-friendly tank game.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "playwright": "^1.58.2"
+  }
+}

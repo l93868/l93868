@@ -1,0 +1,9 @@
+page {
+  background: #08111e;
+  color: #f3f6fb;
+  font-family: "Segoe UI", "PingFang SC", sans-serif;
+}
+
+button {
+  border: 0;
+}
