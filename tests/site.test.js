@@ -7,12 +7,12 @@ const { spawn } = require("node:child_process");
 const root = path.join(__dirname, "..");
 const indexHtml = fs.readFileSync(path.join(root, "index.html"), "utf8");
 
-test("homepage introduces the site as a child's tank history report", () => {
-  assert.match(indexHtml, /我的坦克发展史研究汇报/u);
+test("homepage introduces Tank Liu's tank research report", () => {
+  assert.match(indexHtml, /坦克刘的坦克研究汇报/u);
   assert.match(indexHtml, /10岁/u);
 });
 
-test("homepage exposes six presentation chapters", () => {
+test("homepage exposes seven presentation chapters", () => {
   const expectedChapters = [
     "坦克是怎么诞生的",
     "一战里的第一批坦克",
@@ -26,6 +26,8 @@ test("homepage exposes six presentation chapters", () => {
   for (const chapter of expectedChapters) {
     assert.match(indexHtml, new RegExp(chapter, "u"));
   }
+
+  assert.match(indexHtml, /我准备按这 7 个问题来做汇报/u);
 });
 
 test("homepage includes both report highlights and follow-up details", () => {
