@@ -9,7 +9,7 @@ const indexHtml = fs.readFileSync(path.join(root, "index.html"), "utf8");
 
 test("homepage introduces Tank Liu's tank research report", () => {
   assert.match(indexHtml, /坦克刘的坦克研究汇报/u);
-  assert.match(indexHtml, /10岁/u);
+  assert.match(indexHtml, /Tank Research/u);
 });
 
 test("homepage exposes seven presentation chapters", () => {
@@ -30,9 +30,18 @@ test("homepage exposes seven presentation chapters", () => {
   assert.match(indexHtml, /我准备按这 7 个问题来做汇报/u);
 });
 
-test("homepage includes both report highlights and follow-up details", () => {
+test("homepage includes report highlights and neutral follow-up labels", () => {
   assert.match(indexHtml, /我汇报的重点/u);
-  assert.match(indexHtml, /如果老师继续问/u);
+  assert.match(indexHtml, /继续展开看看/u);
+  assert.doesNotMatch(indexHtml, /老师/u);
+  assert.doesNotMatch(indexHtml, /老教授/u);
+});
+
+test("homepage includes updated research goal and speaking approach", () => {
+  assert.match(indexHtml, /研究目的/u);
+  assert.match(indexHtml, /更好地了解坦克/u);
+  assert.match(indexHtml, /科技发展和世界变化之间/u);
+  assert.match(indexHtml, /我会先用自己的话把重点讲清楚/u);
 });
 
 test("homepage includes local tank model images with source credits", () => {
@@ -118,6 +127,7 @@ test("server returns JPEG content type for local tank images", async () => {
   try {
     const response = await fetch(`http://127.0.0.1:${port}/assets/images/mark-i.jpg`);
     assert.equal(response.headers.get("content-type"), "image/jpeg");
+    assert.equal(response.headers.get("cache-control"), "no-store");
   } finally {
     child.kill();
   }
